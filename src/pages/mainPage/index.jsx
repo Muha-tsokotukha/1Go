@@ -1,6 +1,6 @@
-import { Header, CallToAction, Categories } from "./components";
+import { Header, CallToAction, Categories } from "../../components";
 
-function App() {
+function MainPage() {
   return (
     <div className="App">
       <Header />
@@ -10,4 +10,4 @@ function App() {
   );
 }
 
-export default App;
+export { MainPage };
