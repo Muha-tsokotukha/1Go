@@ -6,8 +6,9 @@ import Toolbar from "@mui/material/Toolbar";
 import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
 import InputBase from "@mui/material/InputBase";
-import AccountCircle from "@mui/icons-material/AccountCircle";
+// import AccountCircle from "@mui/icons-material/AccountCircle";
 import SearchIcon from "@mui/icons-material/Search";
+import { Button } from "@mui/material";
 
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
@@ -56,14 +57,16 @@ export function Header() {
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
         <Toolbar sx={{ display: "flex", justifyContent: "space-between" }}>
-          <Typography
-            variant="h4"
-            noWrap
-            component="div"
-            sx={{ display: { xs: "none", sm: "block" }, color: "#FFFDD0" }}
-          >
-            1GO
-          </Typography>
+          <a style={{ textDecoration: "none" }} href="/">
+            <Typography
+              variant="h4"
+              noWrap
+              component="div"
+              sx={{ display: { xs: "none", sm: "block" }, color: "#FFFDD0" }}
+            >
+              1GO
+            </Typography>
+          </a>
           <Search>
             <SearchIconWrapper>
               <SearchIcon />
@@ -74,15 +77,26 @@ export function Header() {
             />
           </Search>
 
-          <IconButton
-            size="large"
-            edge="end"
-            aria-label="account of current user"
-            aria-haspopup="true"
-            color="inherit"
-          >
-            <AccountCircle />
-          </IconButton>
+          <Box>
+            <a href="/login" style={{ textDecoration: "none" }}>
+              <Button
+                variant="outlined"
+                color="secondary"
+                sx={{ bgcolor: "white" }}
+              >
+                Login
+              </Button>
+            </a>
+            <a href="/register" style={{ textDecoration: "none" }}>
+              <Button
+                variant="outlined"
+                color="secondary"
+                sx={{ ml: "20px", bgcolor: "white" }}
+              >
+                Register
+              </Button>
+            </a>
+          </Box>
         </Toolbar>
       </AppBar>
     </Box>
