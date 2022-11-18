@@ -1,3 +1,16 @@
+# НАЗВАНИЕ ПРОЕКТА
+
+Birgo
+
+## Участники Команды:
+
+20B030662 Nassyrov Mukhit
+20B030740 Zhetpisbay Nurbol
+
+### О проекте
+
+Проект представяет собой сайт в котором содержатся информация о лучших мест отдыха в вашем городе. С помощью сайта вы можете выбрать подходящий себе заведение, забронировать места и сделать заказы за ранее.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
