@@ -7,20 +7,17 @@ import { Button, CardActionArea, CardActions } from "@mui/material";
 
 export function CategoryCard({ item }) {
   return (
-    <Card sx={{ maxWidth: 345 }}>
+    <Card sx={{ width: 345 }}>
       <CardActionArea>
         <CardMedia
           component="img"
           height="140"
-          image={item.imgLink}
+          image={item.url}
           alt="green iguana"
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
             {item.title}
-          </Typography>
-          <Typography variant="body2" color="text.secondary">
-            {item.description}
           </Typography>
         </CardContent>
       </CardActionArea>
