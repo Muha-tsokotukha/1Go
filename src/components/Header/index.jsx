@@ -1,12 +1,11 @@
 import * as React from "react";
+import { ThemeContext } from "../../context/theme";
 import { styled, alpha } from "@mui/material/styles";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
-import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
 import InputBase from "@mui/material/InputBase";
-// import AccountCircle from "@mui/icons-material/AccountCircle";
 import SearchIcon from "@mui/icons-material/Search";
 import { Button } from "@mui/material";
 
@@ -53,10 +52,18 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 }));
 
 export function Header() {
+  const value = React.useContext(ThemeContext);
+  const { toggleTheme } = value;
+
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
-        <Toolbar sx={{ display: "flex", justifyContent: "space-between" }}>
+        <Toolbar
+          sx={{
+            display: "flex",
+            justifyContent: "space-between",
+          }}
+        >
           <a style={{ textDecoration: "none" }} href="/">
             <Typography
               variant="h4"
@@ -78,6 +85,14 @@ export function Header() {
           </Search>
 
           <Box>
+            <Button
+              variant="outlined"
+              color="secondary"
+              sx={{ bgcolor: "white" }}
+              onClick={toggleTheme}
+            >
+              Toggle mode
+            </Button>
             <a href="/login" style={{ textDecoration: "none" }}>
               <Button
                 variant="outlined"

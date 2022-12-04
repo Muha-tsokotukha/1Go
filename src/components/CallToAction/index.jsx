@@ -1,17 +1,22 @@
+import { useContext } from "react";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import { TextField } from "@mui/material";
+import { ThemeContext } from "../../context/theme";
 
 export const CallToAction = () => {
+  const value = useContext(ThemeContext);
+  const theme = value.theme.palette.mode;
+
   return (
     <Box
       sx={{
         display: "flex",
         justifyContent: "space-around",
         alignItems: "center",
-        bgcolor: "#FFFDD0",
         padding: "50px",
+        bgcolor: `${theme === "light" ? "#FFFDD0" : "gray"}}`,
       }}
     >
       <Box>
