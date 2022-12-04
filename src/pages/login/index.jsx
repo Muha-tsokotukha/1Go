@@ -1,10 +1,13 @@
 import { Header, SignIn } from "../../components";
+import { MainThemeProvider } from "../../context/theme";
 
 function SignInPage() {
   return (
     <div className="App">
-      <Header />
-      <SignIn />
+      <MainThemeProvider>
+        <Header />
+        <SignIn />
+      </MainThemeProvider>
     </div>
   );
 }

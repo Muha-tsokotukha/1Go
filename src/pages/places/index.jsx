@@ -1,10 +1,13 @@
 import { Header, ListOfPlaces } from "../../components";
+import { MainThemeProvider } from "../../context/theme";
 
 function PlacesPage() {
   return (
     <div className="App">
-      <Header />
-      <ListOfPlaces />
+      <MainThemeProvider>
+        <Header />
+        <ListOfPlaces />
+      </MainThemeProvider>
     </div>
   );
 }

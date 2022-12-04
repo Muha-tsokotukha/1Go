@@ -1,10 +1,13 @@
 import { Header, SignUp } from "../../components";
+import { MainThemeProvider } from "../../context/theme";
 
 function SignUpPage() {
   return (
     <div className="App">
-      <Header />
-      <SignUp />
+      <MainThemeProvider>
+        <Header />
+        <SignUp />
+      </MainThemeProvider>
     </div>
   );
 }

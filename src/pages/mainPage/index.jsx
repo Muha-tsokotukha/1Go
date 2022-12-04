@@ -1,11 +1,14 @@
 import { Header, CallToAction, Categories } from "../../components";
+import { MainThemeProvider } from "../../context/theme";
 
 function MainPage() {
   return (
     <div className="App">
-      <Header />
-      <CallToAction />
-      <Categories />
+      <MainThemeProvider>
+        <Header />
+        <CallToAction />
+        <Categories />
+      </MainThemeProvider>
     </div>
   );
 }
