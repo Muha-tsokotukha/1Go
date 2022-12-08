@@ -12,12 +12,18 @@ Birgo
 Проект представяет собой сайт в котором содержатся информация о лучших мест отдыха в вашем городе. С помощью сайта вы можете выбрать подходящий себе заведение, забронировать места и сделать заказы за ранее.
 
 Pages: Main, Places, Register, Login
+
 Components: Hero/CallToAction, Categories, Card, Header, Places for places page, authentification.
+
 Props: some components have props i.e. card component takes info about place.
+
 State: state for theme(dark, light), data for places.
+
 Navigation: navigation is implemented with react router dom.
+
 Context: added context for background theme, also mui's themeProvider, which is this ui lib's theme context. 
 
+API request: used js's fetch to get data from jsonplaceholder mock data service. It is placed in service folder. 
 
 # Getting Started with Create React App
 
