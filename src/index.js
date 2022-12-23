@@ -10,6 +10,10 @@ const router = createBrowserRouter([
     element: <MainPage />,
   },
   {
+    path: "/1Go",
+    element: <MainPage />,
+  },
+  {
     path: "/places",
     element: <PlacesPage />,
   },
