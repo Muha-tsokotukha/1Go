@@ -1,4 +1,5 @@
 import * as React from "react";
+import { Link } from "react-router-dom";
 import { ThemeContext } from "../../context/theme";
 import { styled, alpha } from "@mui/material/styles";
 import AppBar from "@mui/material/AppBar";
@@ -64,7 +65,7 @@ export function Header() {
             justifyContent: "space-between",
           }}
         >
-          <a style={{ textDecoration: "none" }} href="/">
+          <Link style={{ textDecoration: "none" }} to="/1Go">
             <Typography
               variant="h4"
               noWrap
@@ -73,7 +74,7 @@ export function Header() {
             >
               1GO
             </Typography>
-          </a>
+          </Link>
           <Search>
             <SearchIconWrapper>
               <SearchIcon />
@@ -93,7 +94,7 @@ export function Header() {
             >
               Toggle mode
             </Button>
-            <a href="/login" style={{ textDecoration: "none" }}>
+            <Link to="/login" style={{ textDecoration: "none" }}>
               <Button
                 variant="outlined"
                 color="secondary"
@@ -101,8 +102,8 @@ export function Header() {
               >
                 Login
               </Button>
-            </a>
-            <a href="/register" style={{ textDecoration: "none" }}>
+            </Link>
+            <Link to="/register" style={{ textDecoration: "none" }}>
               <Button
                 variant="outlined"
                 color="secondary"
@@ -110,7 +111,7 @@ export function Header() {
               >
                 Register
               </Button>
-            </a>
+            </Link>
           </Box>
         </Toolbar>
       </AppBar>
