@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
@@ -11,7 +11,9 @@ import { CategoryCard } from "./card";
 
 export function Categories() {
   const [categories, setCategories] = useState();
-  getCategories().then((data) => setCategories(data.slice(0, 6)));
+  useEffect(() => {
+    getCategories().then((data) => setCategories(data.slice(0, 6)));
+  }, []);
 
   return (
     <Box sx={{ margin: "50px" }}>
